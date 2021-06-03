@@ -1,0 +1,107 @@
+c ---- [ solving ] -----------------------------------------------------------
+c LOG 0 next decision variable 1
+c LOG 1 decide 1
+c LOG 1 assign 1 decision
+c LOG 1 propagating 1
+c LOG 1 assign 3 irredundant size 2 clause -1 3
+c LOG 1 unwatch 4 in irredundant size 3 clause 2 -1 4
+c LOG 1 watch 4 blit -1 in irredundant size 3 clause 2 4 -1
+c LOG 1 unwatch -4 in irredundant size 3 clause 2 -1 -4
+c LOG 1 watch -4 blit -1 in irredundant size 3 clause 2 -4 -1
+c LOG 1 propagating 3
+c LOG 1 unwatch 4 in irredundant size 3 clause -2 -3 4
+c LOG 1 watch 4 blit -3 in irredundant size 3 clause -2 4 -3
+c LOG 1 queue unassigned now 2 bumped 3
+c LOG 1 next decision variable 2
+c LOG 2 decide 2
+c LOG 2 assign 2 decision
+c LOG 2 propagating 2
+c LOG 2 assign -4 irredundant size 2 clause -2 -4
+c LOG 2 conflict irredundant size 3 clause 4 -2 -3
+c LOG 2 analyzing conflict irredundant size 3 clause 4 -2 -3
+c LOG 2 found new level 2 contributing to conflict
+c LOG 2 analyzed literal 4 assigned at level 2
+c LOG 2 analyzed literal -2 assigned at level 2
+c LOG 2 found new level 1 contributing to conflict
+c LOG 2 analyzed literal -3 assigned at level 1
+c LOG 2 analyzing -4 reason irredundant size 2 clause -2 -4
+c LOG 2 first UIP 2
+c LOG 2 1st UIP size 2 and glue 2 clause -3 -2
+c LOG 2 update fast_glue_avg EMA with 2 beta 1 yields 2
+c LOG 2 new fast_glue_avg EMA wait = period = 1, beta = 0.5
+c LOG 2 update slow_glue_avg EMA with 2 beta 1 yields 2
+c LOG 2 new slow_glue_avg EMA wait = period = 1, beta = 0.5
+c LOG 2 bumping also reason literal -1 assigned at level 1
+c LOG 2 moved to front 4 and bumped 5
+c LOG 2 moved to front 3 and bumped 6
+c LOG 2 moved to front 2 and bumped 7
+c LOG 2 moved to front 1 and bumped 8
+c LOG 2 minimizing first UIP clause -3 -2
+c LOG 2 minimized 0 literals
+c LOG 2 update size_avg EMA with 2 beta 1 yields 2
+c LOG 2 new size_avg EMA wait = period = 1, beta = 0.5
+c LOG 2 new redundant size 2 clause -2 -3
+c LOG 2 marking added redundant size 2 clause -2 -3
+c LOG 2 watch -2 blit -3 in redundant size 2 clause -2 -3
+c LOG 2 watch -3 blit -2 in redundant size 2 clause -2 -3
+c LOG 2 update jump_avg EMA with 1 beta 1 yields 1
+c LOG 2 new jump_avg EMA wait = period = 1, beta = 0.5
+c LOG 2 backtracking to decision level 1
+c LOG 2 unassign -4
+c LOG 2 queue unassigned now 4 bumped 5
+c LOG 2 unassign 2
+c LOG 2 queue unassigned now 2 bumped 7
+c LOG 1 assign -2 redundant size 2 clause -2 -3
+c LOG 1 propagating -2
+c LOG 1 assign 4 irredundant size 3 clause 4 2 -1
+c LOG 1 conflict irredundant size 3 clause -4 2 -1
+c LOG 1 analyzing conflict irredundant size 3 clause -4 2 -1
+c LOG 1 found new level 1 contributing to conflict
+c LOG 1 analyzed literal -4 assigned at level 1
+c LOG 1 analyzed literal 2 assigned at level 1
+c LOG 1 analyzed literal -1 assigned at level 1
+c LOG 1 analyzing 4 reason irredundant size 3 clause 4 2 -1
+c LOG 1 analyzing -2 reason redundant size 2 clause -2 -3
+c LOG 1 analyzed literal -3 assigned at level 1
+c LOG 1 analyzing 3 reason irredundant size 2 clause -1 3
+c LOG 1 first UIP 1
+c LOG 1 1st UIP size 1 and glue 1 clause -1
+c LOG 1 update fast_glue_avg EMA with 1 beta 0.5 yields 1.5
+c LOG 1 update slow_glue_avg EMA with 1 beta 0.5 yields 1.5
+c LOG 1 moved to front 4 and bumped 9
+c LOG 1 moved to front 3 and bumped 10
+c LOG 1 moved to front 2 and bumped 11
+c LOG 1 moved to front 1 and bumped 12
+c LOG 1 update size_avg EMA with 1 beta 0.5 yields 1.5
+c LOG 1 update jump_avg EMA with 0 beta 0.5 yields 0.5
+c LOG 1 backtracking to decision level 0
+c LOG 1 unassign 4
+c LOG 1 queue unassigned now 4 bumped 9
+c LOG 1 unassign -2
+c LOG 1 queue unassigned now 2 bumped 11
+c LOG 1 unassign 3
+c LOG 1 unassign 1
+c LOG 1 queue unassigned now 1 bumped 12
+c LOG 0 learned unit clause -1
+c LOG 0 assign -1 unit
+c LOG 0 propagating -1
+c LOG 0 learned unit clause 3
+c LOG 0 assign 3 irredundant size 2 clause 1 3
+c LOG 0 learned unit clause 4
+c LOG 0 assign 4 irredundant size 2 clause 1 4
+c LOG 0 learned unit clause -2
+c LOG 0 assign -2 irredundant size 2 clause 1 -2
+c LOG 0 propagating 3
+c LOG 0 propagating 4
+c LOG 0 propagating -2
+c i  0.01  0  0.5  0    0     2     1 1.5  1.5    8   0 0.0%
+c 1  0.01  0  0.5  0    0     2     1 1.5  1.5    8   0 0.0%
+c [extend] mapping internal 4 assignments to 4 assignments
+c [extend] updated 4 external assignments
+c [extend] extending through extension stack of size 0
+c [extend] flipped 0 literals during extension
+c 
+c ---- [ result ] ------------------------------------------------------------
+c 
+s SATISFIABLE
+v -1 -2 3 4
